@@ -42,3 +42,10 @@ $ cd target/classes
 
 $ java lambdasinaction/chap1/FilteringApples
 
+### 开发人员
+
+WeChat: wgybzb
+
+QQ: 1010437118
+
+E-mail: wgybzb@sina.cn
