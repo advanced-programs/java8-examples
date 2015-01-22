@@ -1,30 +1,32 @@
 package edu.hfut.java8.chap05;
-import java.util.stream.*;
-import java.util.*;
 
-import edu.hfut.java8.chap04.*;
 import static edu.hfut.java8.chap04.Dish.menu;
 
-public class Reducing{
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
 
-    public static void main(String...args){
+import edu.hfut.java8.chap04.Dish;
 
-        List<Integer> numbers = Arrays.asList(3,4,5,1,2);
-        int sum = numbers.stream().reduce(0, (a, b) -> a + b);
-        System.out.println(sum);
+public class Reducing {
 
-        int sum2 = numbers.stream().reduce(0, Integer::sum);
-        System.out.println(sum2);
+	public static void main(String... args) {
 
-        int max = numbers.stream().reduce(0, (a, b) -> Integer.max(a, b));
-        System.out.println(max);
+		List<Integer> numbers = Arrays.asList(3, 4, 5, 1, 2);
+		int sum = numbers.stream().reduce(0, (a, b) -> a + b);
+		System.out.println(sum);
 
-        Optional<Integer> min = numbers.stream().reduce(Integer::min);
-        min.ifPresent(System.out::println);
+		int sum2 = numbers.stream().reduce(0, Integer::sum);
+		System.out.println(sum2);
 
-        int calories = menu.stream()
-                           .map(Dish::getCalories)
-                           .reduce(0, Integer::sum);
-        System.out.println("Number of calories:" + calories);
-    }
+		int max = numbers.stream().reduce(0, (a, b) -> Integer.max(a, b));
+		System.out.println(max);
+
+		Optional<Integer> min = numbers.stream().reduce(Integer::min);
+		min.ifPresent(System.out::println);
+
+		int calories = menu.stream().map(Dish::getCalories).reduce(0, Integer::sum);
+		System.out.println("Number of calories:" + calories);
+	}
+
 }

@@ -6,6 +6,6 @@ import java.lang.annotation.RetentionPolicy;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Authors {
 
-    Author[] value();
+	Author[] value();
 
 }
