@@ -5,7 +5,7 @@ import java.util.function.Consumer;
 public class CollectorHarness {
 
 	public static void main(String[] args) {
-		//System.out.println("Partitioning done in: " + execute(PartitionPrimeNumbers::partitionPrimes) + " msecs");
+		System.out.println("Partitioning done in: " + execute(PartitionPrimeNumbers::partitionPrimes) + " msecs");
 		System.out.println("Partitioning done in: "
 				+ execute(PartitionPrimeNumbers::partitionPrimesWithCustomCollector) + " msecs");
 	}

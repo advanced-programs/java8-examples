@@ -2,30 +2,30 @@ To try out the scenario described in section 8.1 on Evolving APIs you need to do
 
 compile individual files as follows from the directory src/main/java:
 
-javac lambdasinaction/chap8/Resizable.java
-javac lambdasinaction/chap8/Ellipse.java
-javac lambdasinaction/chap8/Utils.java
-javac lambdasinaction/chap8/Game.java
+javac edu.hfut.java8/chap08/Resizable.java
+javac edu.hfut.java8/chap08/Ellipse.java
+javac edu.hfut.java8/chap08/Utils.java
+javac edu.hfut.java8/chap08/Game.java
 
 You can run the application and everything will work:
 
-java lambdasinaction/chap8/Game
+java edu.hfut.java8/chap08/Game
 
 You can now modify the interface Resizable and add the method "setRelativeSize".
 Compile and run, no problem:
 
-javac lambdasinaction/chap8/Resizable.java
+javac edu.hfut.java8/chap08/Resizable.java
 
 Now modify Utils to use the new setRelativeSize method available on all kinds of Resizable.
 Just uncomment the appropriate the line in Utils, compile, run, and you'll have a surprise!
 
-Exception in thread "main" java.lang.AbstractMethodError: lambdasinaction.chap8.Square.setRelativeSize(II)V
+Exception in thread "main" java.lang.AbstractMethodError: edu.hfut.java8.chap08.Square.setRelativeSize(II)V
 
 Note also that recompiling the whole application will fail because Ellipse doesn't implement
 the new method setRelativeSize:
 
-javac lambdasinaction/chap8/Ellipse.java
-lambdasinaction/chap7/Ellipse.java:6: error: Ellipse is not abstract and does not override abstract method setRelativeSize(int,int) in Resizable
+javac edu.hfut.java8/chap08/Ellipse.java
+edu.hfut.java8/chap07/Ellipse.java:6: error: Ellipse is not abstract and does not override abstract method setRelativeSize(int,int) in Resizable
 public class Ellipse implements Resizable {
        ^
 1 error

@@ -21,7 +21,7 @@ public class MeaningOfThis {
 
 	public static void main(String... args) {
 		MeaningOfThis m = new MeaningOfThis();
-		m.doIt(); // ???
+		m.doIt();
 	}
 
 }

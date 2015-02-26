@@ -11,6 +11,7 @@ abstract class OnlineBanking {
 
 	// dummy Customer class
 	static private class Customer {
+		//
 	}
 
 	// dummy Datbase class

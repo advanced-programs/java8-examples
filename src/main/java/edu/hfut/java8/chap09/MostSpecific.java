@@ -9,16 +9,20 @@ public class MostSpecific {
 	}
 
 	static interface A {
+
 		public default void hello() {
 			System.out.println("Hello from A");
 		}
+
 	}
 
 	static interface B extends A {
+
 		@Override
 		public default void hello() {
 			System.out.println("Hello from B");
 		}
+
 	}
 
 	static class C implements B, A {

@@ -10,8 +10,8 @@ public class StreamVsCollection {
 		List<String> names = Arrays.asList("Java8", "Lambdas", "In", "Action");
 		Stream<String> s = names.stream();
 		s.forEach(System.out::println);
-		// uncommenting this line will result in an IllegalStateException
-		// because streams can be consumed only once
+		// 运行该语句会抛出IllegalStateException异常
+		// 因为stream流只能被消费一次
 		// s.forEach(System.out::println);
 	}
 
